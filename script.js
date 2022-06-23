@@ -21,3 +21,22 @@ for (let i = 0; i <= 15; i++) {
     console.log("buzz");
   } else console.log(i);
 }
+
+alert("Hola");
+let nombre = prompt("ingresa tu nombre");
+let cantidadCaracteres = nombre.length;
+if (cantidadCaracteres < 3) {
+  console.log(" Debe ingresar un minimo de tres caracteres");
+} else {
+}
+let contraseña = prompt(" ingrese contraseña");
+alert("ud. ingreso ok");
+
+confirm("QUiere iniciar sesion?");
+let user = prompt("Ingrese usuario");
+let pass = prompt("ingrese contraseña");
+if (user !== nombre || pass !== constraseña) {
+  console.log(" Su usuario o contraseña son incorrectos");
+} else {
+  "Bienvenido " + nombre;
+}
