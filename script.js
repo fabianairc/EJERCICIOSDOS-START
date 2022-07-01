@@ -69,43 +69,90 @@
 //     return (message = "Es mayor a 0");
 //   } else message = "Es menor que 0";
 //   return message;
+// // };
+
+// // let chosenNumber = prompt("ingresa un numero");
+// // let response = findNumberType(chosenNumber);
+
+// // alert(response);
+// const chosenNumber = prompt("Ingresa un Número");
+// let parsedNumber = +chosenNumber;
+
+// let message = "";
+
+// const myFunc2 = (number) => {
+//   if (!parsedNumber) {
+//     message = "No es un numero";
+//     return message;
+//   }
+//   if (parsedNumber === 1) {
+//     message = "No es primo}";
+//     return message;
+//   }
+//   if (parsedNumber === 2) {
+//     message = "es primo";
+//     return message;
+//   }
+//   if (parsedNumber === 0) {
+//     message = "No es primo";
+//     return message;
+//   }
+
+//   for (let i = 2; i < parsedNumber; i++) {
+//     if (parsedNumber % i === 0) {
+//       message = "No es primo";
+//       return message;
+//     }
+//   }
+//   message = "es primo";
+//   return message;
+// };
+// const result = myFunc2(parsedNumber);
+// alert(result);
+// let grades = prompt("Ingrese la temperatura en números");
+// let typeGrades = prompt("Ponga C si son celcius o F si son Farenheits");
+// let type = typeGrades.toUpperCase;
+// let pasrsedGrades = +grades;
+// let message = "";
+
+// const Convert = (number) => {
+//   if (!pasrsedGrades || pasrsedGrades !== 0) {
+//     message = "EL caracter ingresado no es un numero";
+//     return alert(message);
+//   }
+
+//   if ((typeGrades = "C")) {
+//     const farenheit = (pasrsedGrades * 9) / 5 + 32;
+//     message = `Su temperatura en Farenheit es ${farenheit}`;
+//     return message;
+//   }
+//   if ((typeGrades = "F")) {
+//     const celsius = pasrsedGrades - 32 + 5 / 9;
+//     message = `Su temperatura en Celsius es ${celsius} `;
+//     return message;
+//   }
 // };
 
-// let chosenNumber = prompt("ingresa un numero");
-// let response = findNumberType(chosenNumber);
-
-// alert(response);
-const chosenNumber = prompt("Ingresa un Número");
-let parsedNumber = +chosenNumber;
-
-let message = "";
-
-const myFunc2 = (number) => {
-  if (!parsedNumber) {
-    message = "No es un numero";
-    return message;
+// let Calculo = Convert();
+// alert(Calculo);
+const convertTemperature = (temperature, target) => {
+  const parsedTemperature = +temperature;
+  const parsedTarget = target.toLowerCase();
+  if (!parsedTemperature && parsedTemperature !== 0) {
+    alert("Lo ingresado no es un numero");
   }
-  if (parsedNumber === 1) {
-    message = "No es primo}";
-    return message;
+  if (parsedTarget === "celsius") {
+    return ((parsedTemperature - 32) * 5) / 9;
+  } else if (parsedTarget === "faranheit") {
+    return (parsedTemperature * 9) / 5 + 32;
+  } else {
+    alert("  El formato ingresado no es valido");
   }
-  if (parsedNumber === 2) {
-    message = "es primo";
-    return message;
-  }
-  if (parsedNumber === 0) {
-    message = "No es primo";
-    return message;
-  }
-
-  for (let i = 2; i < parsedNumber; i++) {
-    if (parsedNumber % i === 0) {
-      message = "No es primo";
-      return message;
-    }
-  }
-  message = "es primo";
-  return message;
 };
-const result = myFunc2(parsedNumber);
-alert(result);
+const temperature = prompt(" ingresa temperatura");
+const target = prompt("Ingresa q ue unidad de medida queres convertirla");
+const response = convertTemperature(temperature, target);
+
+if (response !== undefined) {
+  alert(`La temperatura en ${target.toLowerCase} es ${response}`);
+}
