@@ -134,25 +134,43 @@
 // };
 
 // let Calculo = Convert();
-// alert(Calculo);
-const convertTemperature = (temperature, target) => {
-  const parsedTemperature = +temperature;
-  const parsedTarget = target.toLowerCase();
-  if (!parsedTemperature && parsedTemperature !== 0) {
-    alert("Lo ingresado no es un numero");
-  }
-  if (parsedTarget === "celsius") {
-    return ((parsedTemperature - 32) * 5) / 9;
-  } else if (parsedTarget === "faranheit") {
-    return (parsedTemperature * 9) / 5 + 32;
-  } else {
-    alert("  El formato ingresado no es valido");
-  }
-};
-const temperature = prompt(" ingresa temperatura");
-const target = prompt("Ingresa q ue unidad de medida queres convertirla");
-const response = convertTemperature(temperature, target);
+// // alert(Calculo);
+// const convertTemperature = (temperature, target) => {
+//   const parsedTemperature = +temperature;
+//   const parsedTarget = target.toLowerCase();
+//   if (!parsedTemperature && parsedTemperature !== 0) {
+//     alert("Lo ingresado no es un numero");
+//   }
+//   if (parsedTarget === "celsius") {
+//     return ((parsedTemperature - 32) * 5) / 9;
+//   } else if (parsedTarget === "faranheit") {
+//     return (parsedTemperature * 9) / 5 + 32;
+//   } else {
+//     alert("  El formato ingresado no es valido");
+//   }
+// };
+// const temperature = prompt(" ingresa temperatura");
+// const target = prompt("Ingresa q ue unidad de medida queres convertirla");
+// const response = convertTemperature(temperature, target);
 
-if (response !== undefined) {
-  alert(`La temperatura en ${target.toLowerCase} es ${response}`);
-}
+// if (response !== undefined) {
+//   alert(`La temperatura en ${target.toLowerCase} es ${response}`);
+// }
+
+const calcularTotal = () => {
+  let total = 0;
+  let subtotal;
+
+  do {
+    subtotal = prompt("Ingrese el valor del producto");
+    const parsedSubtotal = +subtotal;
+    if (parsedSubtotal) {
+      total += parsedSubtotal;
+    } else {
+      alert("Incorrecto");
+    }
+  } while (subtotal.toLowerCase() !== "total");
+  return total;
+};
+const response = calcularTotal();
+alert(response);
