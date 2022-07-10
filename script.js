@@ -154,23 +154,60 @@
 // const response = convertTemperature(temperature, target);
 
 // if (response !== undefined) {
-//   alert(`La temperatura en ${target.toLowerCase} es ${response}`);
-// }
+// //   alert(`La temperatura en ${target.toLowerCase} es ${response}`);
+// // }
 
-const calcularTotal = () => {
-  let total = 0;
-  let subtotal;
+// const calcularTotal = () => {
+//   let total = 0;
+//   let subtotal;
 
-  do {
-    subtotal = prompt("Ingrese el valor del producto");
-    const parsedSubtotal = +subtotal;
-    if (parsedSubtotal) {
-      total += parsedSubtotal;
-    } else {
-      alert("Incorrecto");
-    }
-  } while (subtotal.toLowerCase() !== "total");
-  return total;
-};
-const response = calcularTotal();
-alert(response);
+//   do {
+//     subtotal = prompt("Ingrese el valor del producto");
+//     const parsedSubtotal = +subtotal;
+//     if (parsedSubtotal) {
+//       total += parsedSubtotal;
+//     } else {
+//       alert("Incorrecto");
+//     }
+//   } while (subtotal.toLowerCase() !== "total");
+//   return total;
+// };
+// con]
+
+const invitedPeople = [
+  "Lucas",
+  "Matias",
+  "Jose",
+  "Pedro",
+  "Martina",
+  "Marcelo",
+  "Esteban",
+  "Marcela",
+  "Martin",
+];
+console.log(invitedPeople.length);
+console.log(invitedPeople[invitedPeople.length - 1]);
+const addedPedro = invitedPeople.push("Pedro");
+console.log(invitedPeople);
+
+const findMarcela = "Marcela";
+const index = invitedPeople.indexOf(findMarcela);
+console.log(index);
+
+const invitedConfirmed = invitedPeople.filter((item) => item !== "Marcela");
+console.log(invitedConfirmed);
+
+const agregarOrden = invitedConfirmed.map((name, index) => {
+  return `${name}: Orden ${index}`;
+});
+console.log(agregarOrden);
+
+const cantidadPlatos = [3, 1, 1, 4];
+const total = cantidadPlatos.reduce((acumulador, valorActual) => {
+  return acumulador + valorActual;
+}, 0);
+console.log(total);
+
+const orderedInvitedPeople = invitedConfirmed.sort();
+
+console.log(orderedInvitedPeople);
