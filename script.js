@@ -136,78 +136,131 @@
 // let Calculo = Convert();
 // // alert(Calculo);
 // const convertTemperature = (temperature, target) => {
-//   const parsedTemperature = +temperature;
-//   const parsedTarget = target.toLowerCase();
-//   if (!parsedTemperature && parsedTemperature !== 0) {
-//     alert("Lo ingresado no es un numero");
+// //   const parsedTemperature = +temperature;
+// //   const parsedTarget = target.toLowerCase();
+// //   if (!parsedTemperature && parsedTemperature !== 0) {
+// //     alert("Lo ingresado no es un numero");
+// //   }
+// //   if (parsedTarget === "celsius") {
+// //     return ((parsedTemperature - 32) * 5) / 9;
+// //   } else if (parsedTarget === "faranheit") {
+// //     return (parsedTemperature * 9) / 5 + 32;
+// //   } else {
+// //     alert("  El formato ingresado no es valido");
+// //   }
+// // };
+// // const temperature = prompt(" ingresa temperatura");
+// // const target = prompt("Ingresa q ue unidad de medida queres convertirla");
+// // const response = convertTemperature(temperature, target);
+
+// // if (response !== undefined) {
+// // //   alert(`La temperatura en ${target.toLowerCase} es ${response}`);
+// // // }
+
+// // const calcularTotal = () => {
+// //   let total = 0;
+// //   let subtotal;
+
+// //   do {
+// // //     subtotal = prompt("Ingrese el valor del producto");
+// // //     const parsedSubtotal = +subtotal;
+// // //     if (parsedSubtotal) {
+// // //       total += parsedSubtotal;
+// // //     } else {
+// // //       alert("Incorrecto");
+// // //     }
+// // //   } while (subtotal.toLowerCase() !== "total");
+// // //   return total;
+// // // };
+// // // con]
+
+// // const invitedPeople = [
+// //   "Lucas",
+// //   "Matias",
+// //   "Jose",
+// //   "Pedro",
+// //   "Martina",
+// //   "Marcelo",
+// //   "Esteban",
+// //   "Marcela",
+// //   "Martin",
+// // ];
+// // console.log(invitedPeople.length);
+// // console.log(invitedPeople[invitedPeople.length - 1]);
+// // const addedPedro = invitedPeople.push("Pedro");
+// // console.log(invitedPeople);
+
+// // const findMarcela = "Marcela";
+// // const index = invitedPeople.indexOf(findMarcela);
+// // console.log(index);
+
+// // const invitedConfirmed = invitedPeople.filter((item) => item !== "Marcela");
+// // console.log(invitedConfirmed);
+
+// // const agregarOrden = invitedConfirmed.map((name, index) => {
+// //   return `${name}: Orden ${index}`;
+// // });
+// // console.log(agregarOrden);
+
+// // const cantidadPlatos = [3, 1, 1, 4];
+// // const total = cantidadPlatos.reduce((acumulador, valorActual) => {
+// //   return acumulador + valorActual;
+// // }, 0);
+// // console.log(total);
+
+// // const orderedInvitedPeople = invitedConfirmed.sort();
+
+// // console.log(orderedInvitedPeople);
+
+// class Deportes {
+//   constructor(name, isTeamSport) {
+//     this.name = name;
+//     this.isTeamSport = isTeamSport;
 //   }
-//   if (parsedTarget === "celsius") {
-//     return ((parsedTemperature - 32) * 5) / 9;
-//   } else if (parsedTarget === "faranheit") {
-//     return (parsedTemperature * 9) / 5 + 32;
-//   } else {
-//     alert("  El formato ingresado no es valido");
+//   sayName() {
+//     console.log(`El deporte  es ${this.name}`);
 //   }
-// };
-// const temperature = prompt(" ingresa temperatura");
-// const target = prompt("Ingresa q ue unidad de medida queres convertirla");
-// const response = convertTemperature(temperature, target);
 
-// if (response !== undefined) {
-// //   alert(`La temperatura en ${target.toLowerCase} es ${response}`);
-// // }
+//   sayIsTeamSport() {
+//     const message = this.isTeamSport
+//       ? `Es un deporte en equipo`
+//       : `No es un deporte en equipo`;
+//     console.log(message);
+//   }
+// }
 
-// const calcularTotal = () => {
-//   let total = 0;
-//   let subtotal;
+// class cantidadJugadores extends Deportes {
+//   constructor(name, jugadores) {
+//     super(name);
+//     this.jugadores = jugadores;
+//   }
+//   sayCantidad() {
+//     console.log(
+//       `El ${this.name} cuenta con ${this.jugadores} cantidad de jugadores`
+//     );
+//   }
+// }
+// const Karate = new Deportes("Karate", true);
+// Karate.sayIsTeamSport();
+// Karate.sayName();
+// const futbol = new cantidadJugadores("futbol", "11");
+// futbol.sayCantidad();
 
-//   do {
-//     subtotal = prompt("Ingrese el valor del producto");
-//     const parsedSubtotal = +subtotal;
-//     if (parsedSubtotal) {
-//       total += parsedSubtotal;
-//     } else {
-//       alert("Incorrecto");
-//     }
-//   } while (subtotal.toLowerCase() !== "total");
-//   return total;
-// };
-// con]
+const AndreaBag = { cerveza: 2, sandwich: 2, papasfritas: 1 };
+const MartinBag = { torta: 1, gaseosa: 1, galletita: 1 };
 
-const invitedPeople = [
-  "Lucas",
-  "Matias",
-  "Jose",
-  "Pedro",
-  "Martina",
-  "Marcelo",
-  "Esteban",
-  "Marcela",
-  "Martin",
-];
-console.log(invitedPeople.length);
-console.log(invitedPeople[invitedPeople.length - 1]);
-const addedPedro = invitedPeople.push("Pedro");
-console.log(invitedPeople);
+// console.log(AndreaBag, MartinBag);
 
-const findMarcela = "Marcela";
-const index = invitedPeople.indexOf(findMarcela);
-console.log(index);
+// const AndreasProducts = Object.keys(AndreaBag);
+// const MartinProducts = Object.keys(MartinBag);
+// console.log(AndreasProducts, MartinProducts);
 
-const invitedConfirmed = invitedPeople.filter((item) => item !== "Marcela");
-console.log(invitedConfirmed);
+// Object.assign(MartinBag, AndreaBag);
+// console.log(MartinBag);
 
-const agregarOrden = invitedConfirmed.map((name, index) => {
-  return `${name}: Orden ${index}`;
+const productNames = Object.keys(MartinBag);
+totalProducts = 0;
+productNames.forEach((product) => {
+  totalProducts += MartinBag[product];
 });
-console.log(agregarOrden);
-
-const cantidadPlatos = [3, 1, 1, 4];
-const total = cantidadPlatos.reduce((acumulador, valorActual) => {
-  return acumulador + valorActual;
-}, 0);
-console.log(total);
-
-const orderedInvitedPeople = invitedConfirmed.sort();
-
-console.log(orderedInvitedPeople);
+console.log(totalProducts);
