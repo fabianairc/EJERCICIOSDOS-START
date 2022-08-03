@@ -246,21 +246,66 @@
 // const futbol = new cantidadJugadores("futbol", "11");
 // futbol.sayCantidad();
 
-const AndreaBag = { cerveza: 2, sandwich: 2, papasfritas: 1 };
-const MartinBag = { torta: 1, gaseosa: 1, galletita: 1 };
+// // const AndreaBag = { cerveza: 2, sandwich: 2, papasfritas: 1 };
+// // const MartinBag = { torta: 1, gaseosa: 1, galletita: 1 };
 
-// console.log(AndreaBag, MartinBag);
+// // // console.log(AndreaBag, MartinBag);
 
-// const AndreasProducts = Object.keys(AndreaBag);
-// const MartinProducts = Object.keys(MartinBag);
-// console.log(AndreasProducts, MartinProducts);
+// // // const AndreasProducts = Object.keys(AndreaBag);
+// // // const MartinProducts = Object.keys(MartinBag);
+// // // console.log(AndreasProducts, MartinProducts);
 
-// Object.assign(MartinBag, AndreaBag);
-// console.log(MartinBag);
+// // // Object.assign(MartinBag, AndreaBag);
+// // // console.log(MartinBag);
 
-const productNames = Object.keys(MartinBag);
-totalProducts = 0;
-productNames.forEach((product) => {
-  totalProducts += MartinBag[product];
-});
-console.log(totalProducts);
+// // const productNames = Object.keys(MartinBag);
+// // totalProducts = 0;
+// // productNames.forEach((product) => {
+// //   totalProducts += MartinBag[product];
+// // });
+// // // console.log(totalProducts);
+
+// // setTimeout((resolve) => console.log("mARIO"), 100);
+// // setTimeout((resolve) => console.log("mARTIN"), 200);
+// // setTimeout((resolve) => console.log("JUAN"), 300);
+
+// // // setTimeout((resolve) => console.log("JUAN"), 400);
+// // // // setTimeout((resolve) => console.log("mARTIN"), 500);
+// // // // setTimeout((resolve) => console.log("MARIO"), 600);
+
+// // // const baseUrl = "https://api.github.com/";
+
+// // // const getPublicRepositories = async () => {
+// // //   const response = await fetch(`${baseUrl}/re´positories`);
+// // //   const jsonResponse = await response.json();
+// // //   console.log(j`
+
+// // //dom
+// // //TOMAR ELEMNTO POR ETIQUETA CON JS
+// // const header = document.getElementsByTagName("header");
+// // //Por nombre de clase
+// // const container = document.getElementsByClassName("container");
+// // //PRO ID
+// // const avatar = document.getElementById("avatar");
+
+// // //queryselector
+// // const uno= document.querySelector("header")
+// // const dos = document.querySelector(".container")
+// // // const tres = document.querySelector("#coso")
+// // //acceder y modificar texto con textConten e innerText
+// // const username = document.querySelector(".username");
+// // username.innerText = "Fabiana";
+// //incorporar html con js
+
+// const list = document.querySelector("#reposlist");
+// list.innerHTML(`<li>un repo <li/>`);
+
+//modificar estilos
+
+// const username = quersySelector(".username");
+// //className (pisa la clase anterior)
+// username.className = "backround-black";``
+
+// //classList
+// username.classList.add("backround-red")
+username.classList.remove("backround-red");
