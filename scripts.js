@@ -307,5 +307,35 @@
 // username.className = "backround-black";``
 
 // //classList
-// username.classList.add("backround-red")
-username.classList.remove("backround-red");
+// // username.classList.add("backround-red")
+// username.classList.remove("backround-red");
+// // username.classList.toggle("backround-red") Si no tiene clase la agrega y si si la tiene, la quita
+// username.style.backround ("red")
+
+const baseUrl = "https://api.github.com";
+const getPublicRepositories = async () => {
+  const response = await fetch(`${baseUrl}/repositories`);
+  const jsonResponse = response.json();
+  return jsonResponse[0];
+};
+
+getPublicRepositories();
+const getRepositoriesFromOwner = async (reposEndpoint) => {
+  const reposResponse = await fetch(reposEndpoint);
+  const jsonReposResponse = await reposResponse.json();
+  const responseRepos = jsonReposResponse.slice(0, 5);
+  return responseRepos;
+};
+
+const editProfile = async () => {
+  const profileData = await getPublicRepositories();
+  const avatarUrl = profileData.owner.avatar_url;
+  const name = profileData.owner.login;
+  const userRepos = await getRepositoriesFromOwner(profileData.owner.repos_url);
+
+  const nameNode = document.querySelector("h1");
+  nameNode.textContent = name;
+  const userAvatar = document.querySelector("#avatar");
+  userAvatar.src = avatarUrl;
+};
+editProfile();
